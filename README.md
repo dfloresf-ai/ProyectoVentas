@@ -10,6 +10,7 @@ El sistema permite:
 ● Mantener el carrito guardado usando localStorage.
 
 
+
 El proyecto fue desarrollado sin backend, sin autenticación y sin base de datos, utilizando
 únicamente datos locales.
 Tecnologías Utilizadas
@@ -109,3 +110,4 @@ Proceso de ejecución del proyecto:
 ● Compilación inicial: Ejecutar npm run dev para iniciar el servidor de desarrollo.
 ● Acceso: Abrir localhost:3000 en su navegador preferido.
 ● Validación: Confirmar que la interfaz de Tech POS se carga correctamente
+

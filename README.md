@@ -1,6 +1,8 @@
 Tech POS es una aplicación web desarrollada con Next.js y TypeScript que funciona como
 un catálogo y punto de venta de productos tecnológicos.
 
+Trabajo hecho por Diego Flores
+
 El sistema permite:
 ● Visualizar productos tecnológicos.
 ● Filtrar productos por categorías.

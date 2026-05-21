@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Tech POS es una aplicación web desarrollada con Next.js y TypeScript que funciona como
+un catálogo y punto de venta de productos tecnológicos.
 
-## Getting Started
+El sistema permite:
+● Visualizar productos tecnológicos.
+● Filtrar productos por categorías.
+● Consultar detalles individuales.
+● Agregar productos a un carrito.
+● Calcular el total de compra.
+● Mantener el carrito guardado usando localStorage.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+El proyecto fue desarrollado sin backend, sin autenticación y sin base de datos, utilizando
+únicamente datos locales.
+Tecnologías Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-Next.js Framework principal
+-React Biblioteca para interfaces
+-TypeScript Tipado estático
+-Tailwind CSS Framework de estilos
+-localStorage Persistencia del carrito
+-Lucide React Iconografía
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requisitos Previos
+Antes de ejecutar el proyecto es necesario instalar:
+Node.js
+Versión recomendada:
+Node.js v18 o superior
+Descarga oficial:
+Node.js oficial
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Instalación del Proyecto
+1. Clonar o descargar el proyecto
+Si utilizas Git:
+git clone <url-del-repositorio>
+O descarga el proyecto manualmente.
+2. Abrir el proyecto
+Abrir la carpeta del proyecto en Visual Studio Code.
+3. Instalar dependencias
+Abrir una terminal dentro del proyecto y ejecutar:
+npm install
+Esto instalará todas las dependencias necesarias.
+Dependencias Principales
+Instalar Lucide React
+npm install lucide-react
 
-## Learn More
+Instalar Tailwind CSS
+npm install -D tailwindcss@3 postcss autoprefixer
 
-To learn more about Next.js, take a look at the following resources:
+Generar configuración de Tailwind
+npx tailwindcss init -p
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Configuración de Tailwind
+tailwind.config.js
+contenido:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+content: [
+"./app/**/*.{js,ts,jsx,tsx}",
+"./components/**/*.{js,ts,jsx,tsx}",
+],
+theme: {
+extend: {},
+},
+plugins: [],
+}
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+globals.css
+Ubicación:
+app/globals.css
+Contenido:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, Helvetica, sans-serif;
+}
+* {
+box-sizing: border-box;
+}
+
+Configuración de Imágenes Externas
+El proyecto utiliza imágenes desde internet.
+
+next.config.ts
+conteido:
+
+import type { NextConfig } from 'next'
+const nextConfig: NextConfig = {
+images: {
+remotePatterns: [
+{
+protocol: 'https',
+hostname: 'images.unsplash.com'
+}
+]
+}
+}
+export default nextConfig
+
+
+Proceso de ejecución del proyecto:
+● Entorno de desarrollo: Abrir una terminal en la carpeta raíz del proyecto.
+● Compilación inicial: Ejecutar npm run dev para iniciar el servidor de desarrollo.
+● Acceso: Abrir localhost:3000 en su navegador preferido.
+● Validación: Confirmar que la interfaz de Tech POS se carga correctamente
